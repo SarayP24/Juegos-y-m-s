@@ -1,0 +1,520 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    margin-top: -40rem;
+}
+
+.menu2 {
+    margin-top: -55rem;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.menu3 {
+    margin-top: -50rem;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.menu4 {
+    margin-top: -45rem;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.img-corr {
+    background: url(/img/email.jpg);
+}
+
+/*
+
+   MENU
+
+*/
+
+.navigation {
+    position: absolute;
+    height: 450px;
+    width: 70px;
+    background: #F7DC6F;
+    box-shadow: 10px 0 0 #5D6D7E;   
+    border-left: 10px solid #F7DC6F;
+    overflow-x: hidden; 
+    transition: width 0.5s;
+}
+
+.navigation:hover {
+    width: 225px;
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 40px;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 100%;
+    height: 20%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.navigation ul li.active {
+    background: #5D6D7E;
+}
+
+.navigation ul li a {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: black;
+}
+
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.navigation ul li a .icon ion-icon {
+    position: relative;
+    font-size: 1.5em;
+    z-index: 1;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+
+/*
+
+   AHORCADO
+
+*/
+
+.principal {
+    border: 4px solid #F7DC6F;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 100px;
+    margin-right: auto;
+    margin-top: 5%;
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.tecladoDiv {
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+.tecla {
+    background: linear-gradient(to bottom, #b5a054 5%, #998746 100%);
+    border: 1px outset #615839;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px 0 #000;
+    color:white;
+    font-family: 'Poppins', sans-serif;   
+    font-size: 2em;
+    padding: 8px 17px;
+    margin: 0.5%;
+    text-decoration: none;
+    text-transform: uppercase;
+    animation: teclas 1s;
+    width: 7%;
+}
+
+.teclaDeshabilitada {
+    border: 1px inset #615839;
+    border-radius: 5px;
+    color: black;
+    font-family: 'Poppins', sans-serif;    
+    font-size: 2em;
+    padding: 8px 17px;
+    margin: 0.5%;
+    text-decoration: none;    
+    text-transform: uppercase;
+    width: 7%;
+    background-color: gray;
+}
+
+.boton:active, .tecla:active, .botonEmergente:active {
+    position: relative;
+    top: 1px;
+}
+
+.boton:hover, .tecla:hover, .botonEmergente:hover {
+    background: linear-gradient(to bottom, #998744 65%, #b5a054 100%);
+}
+  
+
+#pista {
+    -webkit-text-stroke: 1px #000;
+    color: #f0e892;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 3em;
+    text-transform: uppercase;
+    animation: pista 1s;
+    text-align: center;
+}
+
+#puntuacionH2 {
+    font-family: 'Bitter', serif;
+    margin: 0 auto;
+    margin-top: 4%;
+    width: fit-content;
+}
+
+#resultado {
+    font-family: 'Bitter', serif;
+    font-size: 2em;
+    text-align: center;
+}
+
+#instruccionesDiv {
+    background-color: whitesmoke;
+    border: 4px solid #f0e892;
+    border-radius: 10px 10px 10px 10px;
+    left: 29%;
+    padding: 1% 2%;
+    position: absolute;
+    top: 19%;
+    visibility: hidden;
+    width: 37%;
+    z-index: 3;
+}
+
+#instruccionesDiv h1 {
+    text-align: center;
+    color: gray;
+    font-family: 'Poppins', sans-serif;    
+    font-size: 46px;
+    text-transform: uppercase;
+}
+  
+#instruccionesDiv p{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+#instruccionesDiv button {
+    padding: .5em;
+    margin-left:20rem;
+    margin-bottom: 1rem;
+    border: 4px solid #615839;
+    border-radius: 1rem;
+}
+
+#solapaDiv {
+    background-color: rgba(47, 47, 47, 0.39);
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    width: 100%;
+    z-index: 2;
+}
+  
+.imagenDiv {
+    margin-top: 10%;
+    float: left;
+    margin-left: 6%;
+    width: 13%;
+}
+
+.intentosH2 span {
+    color: #FFF;
+    font-family: 'Gorditas', cursive;
+    text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+}
+  
+.intentosH2 {
+    color: #FFF;
+    font-family: 'Gorditas', cursive;
+    font-size: 3em;
+    margin: 0 auto;
+    text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+    transform: rotate(20deg);
+    width: fit-content;
+}
+
+.juegoDiv {
+    border: 4px solid #615839;
+    border-radius: 10px 10px 10px 10px;
+    float: left;
+    height: auto;
+    margin-left: 14%;
+    margin-top: 2%;
+    margin-bottom: 2.5%;
+    position: relative;
+    width: 58%;
+}
+
+.pistaIntentosDiv h1 {
+    float: right;
+    margin-left: 20%;
+}
+  
+.pistaIntentosDiv h2 {
+    float: left;
+    margin-top: 3%;
+    width: 31%;
+}
+  
+.pistaIntentosDiv {
+    overflow: hidden;
+    padding-left: 12%;
+}
+
+.cosas {
+    display: flex;
+    margin-left: 27%;
+}
+
+.cosas .boton {
+    padding: .5em;
+    margin-left: 6rem;
+    margin-bottom: 1rem;
+    border: 4px solid #615839;
+    border-radius: 1rem;
+}
+
+/*
+
+   ANIMACIONES
+
+*/
+
+
+@keyframes teclas {
+    from {
+      opacity: 0;
+      transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+    }
+  
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
+  @keyframes pista {
+    from {
+      transform: scale3d(1, 1, 1);
+    }
+  
+    10%, 20% {
+      transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+  
+    30%, 50%, 70%, 90% {
+      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+  
+    40%, 60%, 80% {
+      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+  
+    to {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  
+  @keyframes footer {
+    from {
+      transform: translate3d(0, 100%, 0);
+      visibility: visible;
+    }
+  
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+
+  /*
+
+   PARKING
+
+*/
+.glass {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid black;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.0.37);
+    text-align: center;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid goldenrod;
+    height: 32rem;
+    width: 25rem;
+    margin-left: 40%;
+    margin-top: 15em;
+}
+
+.glass2 {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid black;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.0.37);
+    text-align: center;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid goldenrod;
+    height: 15rem;
+    width: 25rem;
+    margin-left: 40%;
+    margin-top: 20%;
+}
+
+.glass2 input {
+    width: 15rem;
+    padding: .4rem;
+    border-radius: 1rem;
+    border-color: goldenrod;
+}
+
+.glass h2 {
+    font-size: 2rem;
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: goldenrod;
+}
+
+.glass2 h2 {
+    font-size: 2rem;
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: goldenrod;
+}
+
+.glass .container {
+    font-size: 1.2rem;
+    margin-bottom: 1em;
+    color: black;
+}
+
+.glass .form-control {
+    padding: .4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    border-color: goldenrod;
+    text-align: center;
+}
+
+.glass .form-control2 {
+    padding: .4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    border-color: goldenrod;
+    text-align: center;
+    color: white;
+}
+
+.glass .btn {
+    padding: .4rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    border-color: goldenrod;
+}
+
+
+
+.img-car {
+    background-image: url(img/parking.jpg);
+}
+
+
+/* 
+
+INDEX  
+
+*/
+
+
+svg {
+    display: block;
+    font: 10.5em 'Montserrat';
+    width: 960px;
+    height: 300px;
+    background: darkcyan;
+    margin-top: 20rem;
+    margin-left: 25%;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: #4D163D;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: #840037;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: #BD0034;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: #BD0034;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: #FDB731;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}

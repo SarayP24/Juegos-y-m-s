@@ -1,0 +1,50 @@
+/* ORDENADOR */
+@media screen and (max-width: 1366px) {
+  #creditosDiv {
+    top: 12%;
+  }
+
+  #imagen {
+    margin-top: 22%;
+  }
+
+  #instruccionesDiv {
+    top: 4%;
+  }
+
+  #pista {
+    font-size: 2em;
+  }
+
+  #puntuacionH2 {
+    font-size: 1em;
+  }
+
+  #resultado {
+    font-size: 1em;
+  }
+
+  .boton {
+    font-size: 1em;
+  }
+
+  .botonEmergente{
+    font-size: 1.5em;
+  }
+
+  .intentosH2 {
+    font-size: 2em;
+  }
+
+  .tecla {
+    font-size: 1em;
+  }
+
+  .teclaDeshabilitada {
+    font-size: 1em;
+  }
+
+  .principal {
+    margin-top: 2%;
+  }
+}

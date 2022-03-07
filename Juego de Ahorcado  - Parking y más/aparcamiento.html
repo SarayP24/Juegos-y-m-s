@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Inicio</title>
+</head>
+<body class="img-car">
+
+        <div class="glass">
+            <h2>Bienvenidos a mi parking personal</h2>
+            <div class="d-flex justify-content-center">
+                <form>
+                    <label class="container" for="entrada">Escriba la fecha de entrada:</label>
+                    <input type="datetime-local" class="form-control" id="entrada" value="aaaa-mm-ddThh:mm">
+                </form>
+            </div>
+            <div class="d-flex justify-content-center">
+                <form>
+                    <label class="container" for="salida">Fecha de salida:</label> <br>
+                    <input type="datetime-local" class="form-control" id="salida" >
+                </form>
+            </div>
+            <div class="d-flex justify-content-center">
+                <form>
+                    <label class="container" for="precio">Precio a pagar:</label> <br>
+                    <input type="number" class="form-control2" id="precio" disabled>
+                </form>
+            </div>
+
+            <div class='d-flex justify-content-center'>
+                <button class="btn" onclick='calcular()'>Calcular</button>
+            </div>
+
+        </div>
+       
+       
+
+    <section class="menu3">
+
+        <div class="navigation">
+            <ul>
+                <li class="list">
+                    <a href="index.html">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="title">Home</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="ahorcado.html">
+                        <span class="icon"><ion-icon name="body-outline"></ion-icon></span>
+                        <span class="title">Ahorcado</span>
+                    </a>
+                </li>
+                <li class="list active">
+                    <a href="aparcamiento.html">
+                        <span class="icon"><ion-icon name="car-sport-outline"></ion-icon></span>
+                        <span class="title">Aparcamiento</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="vectores.html">
+                        <span class="icon"><ion-icon name="code-working-outline"></ion-icon></span>
+                        <span class="title">Vectores</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="valcorreo.html">
+                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                        <span class="title">Validar Correo</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="index.html">
+                        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                        <span class="title">Salir</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </section>  
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src='./js/aparcamiento.js'></script>
+
+    <script>
+
+        const list = document.querySelectorAll('.list');
+
+        function activeLink() {
+            list.forEach((item) => 
+            item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach((item) =>
+        item.addEventListener('click',activeLink));
+
+    </script>
+    
+</body>
+</html>
